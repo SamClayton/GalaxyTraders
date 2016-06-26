@@ -32,6 +32,7 @@ http@1.1.7
 id-map@1.0.8
 insecure@1.0.7
 jquery@1.11.9
+kadira:flow-router@2.12.1
 launch-screen@1.0.12
 livedata@1.0.18
 logging@1.0.13_1
@@ -51,6 +52,7 @@ observe-sequence@1.0.12
 ordered-dict@1.0.8
 promise@0.7.2_1
 random@1.0.10
+reactive-dict@1.1.8
 reactive-var@1.0.10
 reload@1.1.10
 retry@1.0.8
@@ -62,6 +64,7 @@ standard-minifier-js@1.0.7_1
 templating@1.1.12_1
 templating-tools@1.0.4
 tracker@1.0.14
+twbs:bootstrap@3.3.6
 ui@1.0.11
 underscore@1.0.9
 url@1.0.10
