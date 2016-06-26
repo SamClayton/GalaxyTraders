@@ -1,0 +1,26 @@
+<template name="rankings">
+    <div class="p-y-2"><!-- goddammit, this won't pad the top -->
+    <div class="table-responsive">
+    <table class="table inverse-table table-condensed table-hover">
+        <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Empire</th>
+            <th>Score</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each rankings}}
+            <tr>
+                <th scope="row">{{rank}}</th>
+                <td>{{username}}</td>
+                <td>{{empire}}</td>
+                <td>{{formatNumber score}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+    </div>
+    </div>
+</template>
