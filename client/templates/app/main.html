@@ -3,25 +3,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GalaxyTraders</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/styles/main.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+
+  {{> nav}}
 
   <div class="container">
       <div class="starter-template">
-          <h1>GalaxyTraders</h1>
           {{> hello}}
       </div>
   </div>
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
 
 <!-- template name="info">
   <h2>Learn Meteor!</h2>
