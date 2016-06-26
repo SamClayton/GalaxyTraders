@@ -28,7 +28,7 @@ img#spaceship {
     position: relative;
 }
 
-.imgAndText .gamename {
+.imgAndText > .gamename {
     position: absolute;
     z-index: 1;
     top: 10%;
@@ -50,6 +50,12 @@ img#spaceship {
     border : 0;
 }
 
-.dropdown-menu {
+#rankings {
+    position: relative;
+    padding-top: 20px;
+    max-width: 1000px;
+}
 
+#rankings .score {
+    padding-right: 5%;
 }

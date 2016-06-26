@@ -1,5 +1,5 @@
 <template name="rankings">
-    <div class="p-y-2"><!-- goddammit, this won't pad the top -->
+    <div class="container span8 offset2" id="rankings"><!-- goddammit, this won't pad the top -->
     <div class="table-responsive">
     <table class="table inverse-table table-condensed table-hover">
         <thead>
@@ -7,7 +7,7 @@
             <th>Rank</th>
             <th>Name</th>
             <th>Empire</th>
-            <th>Score</th>
+            <th class="score text-right">Score</th>
         </tr>
         </thead>
         <tbody>
@@ -16,7 +16,7 @@
                 <th scope="row">{{rank}}</th>
                 <td>{{username}}</td>
                 <td>{{empire}}</td>
-                <td>{{formatNumber score}}</td>
+                <td class="score text-right">{{formatNumber score}}</td>
             </tr>
         {{/each}}
         </tbody>
