@@ -4,6 +4,7 @@ Template.rankings.helpers({
         var rankings = Rankings.find();
         return rankings;
     },
+    // TODO bind this somewhere available to all templates?
     formatNumber : function(raw) {
         return s.numberFormat(raw, 0, ",");
     }
