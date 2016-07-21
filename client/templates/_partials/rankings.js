@@ -1,5 +1,4 @@
 Template.rankings.helpers({
-    //add you helpers here
     rankings : function(){
         var rankings = Rankings.find();
         return rankings;
