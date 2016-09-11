@@ -30,3 +30,5 @@ underscorestring:underscore.string
 3stack:bignumber
 browser-policy@1.0.9
 shell-server
+aldeed:simple-schema            # Used in the LevelUpTut Intermediate Meteor, also by Collections2 and AutoForm used there
+aldeed:collection2              # Added because the Meteor Guide covers how to auto-enforce Simple Schema on mutators (CUD ops)

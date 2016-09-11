@@ -36,8 +36,8 @@ img#spaceship {
     /* font-size: 64pt; */
     font-size: 7vw;
     color: #660066;
-    font-family: 'Cuprum', sans-serif;
-    /* font-family: 'Lobster', cursive; */
+    /* font-family: 'Cuprum', sans-serif; */
+    font-family: 'Lobster', cursive;
     text-shadow: 0.01em 0.01em #ecb3ff;
     margin: 0;
     padding: 0;
