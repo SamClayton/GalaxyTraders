@@ -4,6 +4,7 @@ Template.rankings.helpers({
     },
     // TODO bind this somewhere available to all templates?
     formatNumber : function(raw) {
+        // Using the underscore.string manipulation package
         return s.numberFormat(raw, 0, ",");
     }
 });
