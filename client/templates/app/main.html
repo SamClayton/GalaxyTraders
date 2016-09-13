@@ -1,3 +1,4 @@
+<template name="galaxyMain">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,27 +12,12 @@
 </head>
 
 <body>
-
-  {{> nav}}
-
-    <div class="container p-b-2">
-      <div class="imgAndText">
-          <img class="img-responsive img-circle center-block" id="spaceship" src="/img/spaceship_by_slykdrako-d4vzpup.jpg" />
-          <div class="gamename"><p class="p-b-2 m-t-0">Galaxy</p><p class="p-t-2 m-t-0">Traders</p></div>
-          <div class="container"></div>
-      </div>
-  </div>
-
-  {{> rankings}}
+    <!-- div id="wrap" for footer TOS that didn't work -->
+        {{> nav}}
+        {{>Template.dynamic template=content}}
+        {{>Template.dynamic template=secondary}}
+        <!-- div id="push"></div>
+    <!/div -->
+    {{! >footer_tos}}
 </body>
-
-
-<!-- template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
-</template -->
+</template>
