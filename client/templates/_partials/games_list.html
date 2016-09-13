@@ -1,0 +1,36 @@
+<template name="games_list">
+    <div class="container span8 offset2" id="rankings">
+        <div class="table-responsive">
+            <table class="table inverse-table table-condensed table-hover">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Players</th>
+                    <th>Players Online</th>
+                    <th>Active Last Day</th>
+                    <th>Current Age</th>
+                    <th>Started On</th>
+                    <th>Scheduled End</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each games}}
+                    <tr>
+                        <th scope="row">{{name}}</th>
+                        <td>{{playerCount}}</td>
+                        <td>{{dailyPlayerCount}}</td>
+                        <td>{{onlinePlayerCount}}</td>
+                        <td>{{ageDays}}</td>
+                        <td>{{formatDate startDate}}</td>
+                        <td>{{formatDate endDate}}</td>
+                        <td>{{! add action buttons for each game, or do some sort of modal or something for end/delete/edit }}</td>
+                    </tr>
+                {{else}}
+                    <tr><td class="text-center lead" colspan="8">No active games found.</td></tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>

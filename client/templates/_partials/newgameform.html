@@ -1,0 +1,13 @@
+<template name="newGameForm">
+    <div class="container span8 offset2" id="rankings">
+        {{! > quickForm collection="Games" id="newGameForm" type="insert"}}
+        {{#autoForm collection="Games" id="newGameForm" type="insert"}}
+            <fieldset>
+                <legend>Create New Game</legend>
+                {{> afQuickField name='name' autocomplete="off"}}
+            </fieldset>
+            {{! TODO add handlers to redirect to games list or confirmation on success}}
+            <button type="submit" class="btn btn-primary">Create</button>
+        {{/autoForm}}
+    </div>
+</template>

@@ -32,6 +32,7 @@ if(Rankings.find().count() === 0) {
     })
 }
 
+// TODO move this to its own file (?). Current name is misleading but not sure if I have to add the new name somewhere
 if(Meteor.users.find().count() === 0) {
     var id = Accounts.createUser({
         username : "Administrator",

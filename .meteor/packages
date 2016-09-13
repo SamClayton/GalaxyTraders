@@ -32,7 +32,9 @@ browser-policy@1.0.9            # CSP package. Careful, because it's already cau
 shell-server
 aldeed:simple-schema            # Used in the LevelUpTut Intermediate Meteor, also by Collections2 and AutoForm used there
 aldeed:collection2              # Added because the Meteor Guide covers how to auto-enforce Simple Schema on mutators (CUD ops)
+aldeed:autoform@5.0.0           # Works with collection2 and schemas to autogenerate forms
 
 # packages to consider
 # dburles:collection-helpers
 # matb33:collection-hooks
+# ongoworks:security            # Recommended by autoform's author to sanitize and enforce security on collections
