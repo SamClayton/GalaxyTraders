@@ -17,9 +17,10 @@ Meteor.startup(() => {
     // TODO disallowInlineScripts is recommended, but not sure I understand the implications
     BrowserPolicy.content.disallowInlineScripts();
 
-    cpuStats();
+    //cpuStats();
 });
 
+/*
 function cpuStats(){
     var processId = process.pid;
 
@@ -33,3 +34,4 @@ function cpuStats(){
     // Unmonitor process by id - default process.pid
     Usage.unmonitor(processId);
 }
+*/
