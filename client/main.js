@@ -6,3 +6,11 @@ Template.nav.events({
     $("#login-dropdown-list, .dropdown-menu").addClass("dropdown-menu-right");
   }
 });
+
+
+Meteor.subscribe('Games');
+Meteor.subscribe('Rankings');
+
+// Experimental custom server telemetry DDP feed
+serverUsage = new Mongo.Collection('serverUsage');
+Meteor.subscribe('serverUsage');

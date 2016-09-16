@@ -1,5 +1,6 @@
 <template name="rankings">
     <div class="container span8 offset2" id="rankings"><!-- goddammit, this won't pad the top -->
+    <h1 class="text-center">Rankings</h1>
     <div class="table-responsive">
     <table class="table inverse-table table-condensed table-hover">
         <thead>
@@ -18,6 +19,8 @@
                 <td>{{empire}}</td>
                 <td class="score text-right">{{formatNumber score}}</td>
             </tr>
+        {{else}}
+            <tr><td class="text-center lead" colspan="8">No players found.</td></tr>
         {{/each}}
         </tbody>
     </table>

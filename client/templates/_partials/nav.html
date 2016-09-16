@@ -9,6 +9,13 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">GalaxyTraders</a>
+                <span>{{#if isInRole 'Administrator'}}
+                    {{#each serverUsage}}
+                        CPU: {{cpu}}% RAM: {{formatRamMB memory}} MB
+                    {{else}}
+                        No telemetry
+                    {{/each}}
+                {{/if}}</span>
             </div>
             <div id="navbar" class="collapse navbar-collapse pull-right">
                 <ul class="nav navbar-nav">
