@@ -1,3 +1,6 @@
+// Seed collections for initial creation
+// TODO break out to JSON and code? Also, this now pertains to >1 collection so the filename is misleading
+
 var rankingSeeds = [
     {
         "rank": 1,
@@ -26,9 +29,9 @@ var rankingSeeds = [
 ];
 
 if(Rankings.find().count() === 0) {
-    _.each(rankingSeeds, function(product){
-        Rankings.insert(product);
-        console.log("Inserted ", product.sku);
+    _.each(rankingSeeds, function(ranking){
+        Rankings.insert(ranking);
+        console.log("Inserted ranking for user ", ranking.username);
     })
 }
 

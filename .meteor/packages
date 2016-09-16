@@ -34,6 +34,7 @@ underscorestring:underscore.string      # String manipulation extensions for Und
 browser-policy@1.0.9            # CSP package. Careful, because it's already caused some CSP headaches with web fonts
 
 aldeed:simple-schema            # Used in the LevelUpTut Intermediate Meteor, also by Collections2 and AutoForm used there
+aldeed:schema-index             # Control Mongo indexes through SimpleSchema
 aldeed:collection2              # Added because the Meteor Guide covers how to auto-enforce Simple Schema on mutators (CUD ops)
 aldeed:autoform@5.0.0           # Works with collection2 and schemas to autogenerate forms
 momentjs:moment                 # Dependency of above, but also useful for general Date math
