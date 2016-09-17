@@ -1,26 +1,29 @@
 <template name="rankings">
     <div class="container span8 offset2" id="rankings"><!-- goddammit, this won't pad the top -->
-    <div class="table-responsive">
-    <table class="table inverse-table table-condensed table-hover">
-        <thead>
-        <tr>
-            <th>Rank</th>
-            <th>Name</th>
-            <th>Association</th>
-            <th class="score text-right">Score</th>
-        </tr>
-        </thead>
-        <tbody>
-        {{#each rankings}}
+        <h1 class="text-center">Rankings</h1>
+        <div class="table-responsive">
+        <table class="table inverse-table table-condensed table-hover">
+            <thead>
             <tr>
-                <th scope="row">{{rank}}</th>
-                <td>{{username}}</td>
-                <td>{{empire}}</td>
-                <td class="score text-right">{{formatNumber score}}</td>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Association</th>
+                <th class="score text-right">Score</th>
             </tr>
-        {{/each}}
-        </tbody>
-    </table>
-    </div>
+            </thead>
+            <tbody>
+            {{#each rankings}}
+                <tr>
+                    <th scope="row">{{rank}}</th>
+                    <td>{{username}}</td>
+                    <td>{{empire}}</td>
+                    <td class="score text-right">{{formatNumber score}}</td>
+                </tr>
+            {{else}}
+                <tr><td class="text-center lead" colspan="8">No players found.</td></tr>
+            {{/each}}
+            </tbody>
+        </table>
+        </div>
     </div>
 </template>
