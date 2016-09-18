@@ -4,7 +4,6 @@ import { BrowserPolicy } from 'meteor/browser-policy-common';
 Meteor.startup(() => {
     configureContentSecurityPolicy();
     publishCoreGameData();
-    publishProcessData();
 });
 
 function publishCoreGameData() {
@@ -25,49 +24,12 @@ function publishCoreGameData() {
     });
 }
 
-function publishProcessData() {
-    console.log("cpu " + Usage.getUsage(process.pid).cpu);
-
-    CPU = new Mongo.Collection('serverUsage');
-
-    Meteor.publish('serverUsage', function() {
-        var processId = process.pid;
-        var generatedId = new Meteor.Collection.ObjectID()._str;
-        // console.log("generatedId " + generatedId);
-
-        this.added('serverUsage', generatedId, {memory: Usage.getUsage(processId).memory, cpu: Usage.getUsage(processId).cpu});
-
-        // We can call ready to indicate to the client that the initial document sent has been sent
-        this.ready();
-
-        // TODO setTimeout not firing, it seems. What I want is for this to update periodically, maybe triggered by polling?
-        Meteor.setTimeout(() => {
-            console.log("changing custom pub which is subbed from " + this.connection.clientAddress + " with doc id " + generatedId);
-            // If we want to modify a document that we've already added
-            this.changed('serverUsage', generatedId, {
-                date: new Date(),
-                memory: Usage.getUsage(processId).memory,
-                cpu: Usage.getUsage(processId).cpu
-            });
-            this.ready();
-
-            // Or if we don't want the client to see it any more
-            // this.removed('collection-name', 'id');
-
-            this.onStop(() => {
-                // Unmonitor process by id - default process.pid
-                Usage.unmonitor(processId);
-            });
-        });
-    });
-}
-
 function isAdminForPublication(userId) {
     if(Roles.userIsInRole(userId, ['Administrator'])) {
-        console.log("Subscribing user is admin");
+        // console.log("Subscribing user is admin");
         return true;
     }
-    console.log("Subscribing user is NOT admin");
+    // console.log("Subscribing user is NOT admin");
     return false;
 }
 

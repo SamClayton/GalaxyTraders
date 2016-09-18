@@ -10,7 +10,3 @@ Template.nav.events({
 
 Meteor.subscribe('Games');
 Meteor.subscribe('Rankings');
-
-// Experimental custom server telemetry DDP feed
-serverUsage = new Mongo.Collection('serverUsage');
-Meteor.subscribe('serverUsage');

@@ -9,17 +9,10 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">GalaxyTraders</a>
-                <span>{{#if isInRole 'Administrator'}}
-                    {{#each serverUsage}}
-                        CPU: {{cpu}}% RAM: {{formatRamMB memory}} MB
-                    {{else}}
-                        No telemetry
-                    {{/each}}
-                {{/if}}</span>
             </div>
             <div id="navbar" class="collapse navbar-collapse pull-right">
                 <ul class="nav navbar-nav">
-                    {{#if isInRole 'Administrator'}}{{> admindropdown}}{{/if}}
+                    {{#if isInRole 'Administrator'}}{{> ensureSignedIn template="admindropdown"}}{{/if}}
                     <li><a href="/rankings">Rankings</a></li>
                     <li><a href="/help">Help</a></li>
                     {{> loginButtons}}
