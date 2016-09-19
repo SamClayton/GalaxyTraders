@@ -9,7 +9,8 @@ Meteor.startup(function() {
         position: 'top-right',
         timeout: 5000,
         html: false,
-        onRouteClose: true,
+        // False = don't close alerts when the route changes
+        onRouteClose: false,
         stack: true,
         // or you can pass an object:
         // stack: {
@@ -40,5 +41,3 @@ Template.nav.events({
     $("#login-dropdown-list, .dropdown-menu").addClass("dropdown-menu-right");
   }
 });
-
-

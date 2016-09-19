@@ -72,6 +72,11 @@ img#spaceship {
     padding-right: 5%;
 }
 
+/* TODO add styles for other alert levels: error, warning, info */
+.s-alert-success.s-alert-effect-scale {
+    background: #bada55;  /* your background color here */
+    color: #fff  /* your text color here */
+}
 
 
 /* https://getbootstrap.com/2.3.2/examples/sticky-footer.html */

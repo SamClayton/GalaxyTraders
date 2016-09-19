@@ -43,7 +43,7 @@ aldeed:simple-schema            # Used in the LevelUpTut Intermediate Meteor, al
 aldeed:schema-index             # Control Mongo indexes through SimpleSchema
 aldeed:collection2              # Added because the Meteor Guide covers how to auto-enforce Simple Schema on mutators (CUD ops)
 aldeed:autoform@5.0.0           # Works with collection2 and schemas to autogenerate forms
-momentjs:moment                 # Dependency of above, but also useful for general Date math
+momentjs:moment                 # Dependency of autoform, but also useful for general Date math
 
 juliancwirko:s-alert            # Simple and fancy notifications / alerts / errors for Meteor
 juliancwirko:s-alert-jelly      # Jelly visual effect for s-alert
@@ -58,7 +58,6 @@ alanning:trace                  # Client console trace output for devs
 # matb33:collection-hooks
 # ongoworks:security            # Recommended by autoform's author to sanitize and enforce security on collections
 # aldeed:schema-deny
-# aldeed:schema-index
 # juliancwirko:s-alert          # Simple and fancy notifications / alerts / errors for Meteor
 # chrismbeckett:toastr          # Gnome / Growl type non-blocking notifications
 # mouse0270:bootstrap-notify    # Turns standard Bootstrap alerts into "Growl-like" notifications
@@ -68,6 +67,7 @@ alanning:trace                  # Client console trace output for devs
 # velocity:core                 # Velocity, a Meteor specific test-runner
 # fortawesome:fontawesome       # Font Awesome (official): 500+ scalable vector icons, customizable via CSS, Retina friendly
 # session                       # Session is a special ReactiveDict whose contents are preserved across Hot Code Push
+# arillo:flow-router-helpers    # Template helpers for flow-router
 
 # This one may be particularly good for replacing "scheduler"
 # vsivsi:job-collection          # A persistent and reactive job queue for Meteor, supporting distributed workers that can run anywhere
