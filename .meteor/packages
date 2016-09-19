@@ -30,6 +30,8 @@ useraccounts:core               # Needed for AccountsTemplates.configure ?
 accounts-base                   # Base user accounts package
 accounts-password@1.3.0         # username/password login to account
 accounts-facebook@1.0.10        # Facebook user login
+# accounts-github                 # Github user login
+# accounts-google               # Google user login
 ian:accounts-ui-bootstrap-3     # UI for user accounts including Facebook and username/password logins
 alanning:roles                  # Roles for users, including ACLs (?)
 # useraccounts:flow-routing     # UserAccounts package providing routes configuration capability via kadira:flow-router
@@ -49,7 +51,7 @@ juliancwirko:s-alert            # Simple and fancy notifications / alerts / erro
 juliancwirko:s-alert-jelly      # Jelly visual effect for s-alert
 
 meteortoys:allthings            # Dev tools yay "Since Meteor Toys are a debugOnly package, Meteor's build process will not compile it into production code."
-alanning:trace                  # Client console trace output for devs
+# alanning:trace                  # Client console trace output for devs
 # okland:pidusage                 # System monitoring including cpu usage
 
 

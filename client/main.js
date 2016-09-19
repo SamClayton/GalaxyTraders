@@ -35,6 +35,23 @@ Meteor.startup(function() {
     });
 });
 
+// Boot the user back to site root upon logout with a reactive tracker
+Tracker.autorun(() => {
+    if (!Meteor.userId()) {
+        FlowRouter.go('/');
+    }
+});
+
+// Callback from accounts-ui-bootstrap-3 package
+accountsUIBootstrap3.logoutCallback = function(error) {
+    if (error) {
+        sAlert.error('Error: ' + error);
+    } else {
+        sAlert.info('You have logged out.');
+        FlowRouter.go('site-root');
+    }
+}
+
 // Make the login popup stay within bounds of the page
 Template.nav.events({
   'click .dropdown-toggle'(event, instance) {
