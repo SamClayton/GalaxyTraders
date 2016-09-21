@@ -34,12 +34,13 @@ accounts-facebook@1.0.10        # Facebook user login
 # accounts-google               # Google user login
 ian:accounts-ui-bootstrap-3     # UI for user accounts including Facebook and username/password logins
 alanning:roles                  # Roles for users, including ACLs (?)
+utilities:avatar                # Support for user's profile photo
 # useraccounts:flow-routing     # UserAccounts package providing routes configuration capability via kadira:flow-router
 # useraccounts:bootstrap        # Accounts Templates styled for Twitter Bootstrap
 
+browser-policy@1.0.9            # CSP package. Careful, because it's already caused some CSP headaches with web fonts
 underscorestring:underscore.string      # String manipulation extensions for Underscore.js javascript library (used for number string formatting)
 3stack:bignumber                # Dealing with large numbers. AAT deals with these often
-browser-policy@1.0.9            # CSP package. Careful, because it's already caused some CSP headaches with web fonts
 
 aldeed:simple-schema            # Used in the LevelUpTut Intermediate Meteor, also by Collections2 and AutoForm used there
 aldeed:schema-index             # Control Mongo indexes through SimpleSchema

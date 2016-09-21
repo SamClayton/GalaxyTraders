@@ -3,6 +3,7 @@ import { Template } from 'meteor/templating';
 Meteor.startup(function() {
     Meteor.subscribe('Games');
     Meteor.subscribe('Rankings');
+    Meteor.subscribe('Users');
 
     sAlert.config({
         effect: 'jelly',
@@ -11,13 +12,13 @@ Meteor.startup(function() {
         html: false,
         // False = don't close alerts when the route changes
         onRouteClose: false,
-        stack: true,
+        // stack: true,
         // or you can pass an object:
-        // stack: {
-        //     spacing: 10 // in px
-        //     limit: 3 // when fourth alert appears all previous ones are cleared
-        // }
-        offset: 20, // in px - will be added to first alert (bottom or top - depends of the position in config)
+        stack: {
+            spacing: 10 // in px
+            // limit: 3 // when fourth alert appears all previous ones are cleared
+        },
+        offset: 70, // in px - will be added to first alert (bottom or top - depends of the position in config)
         beep: false,
         // examples:
         // beep: '/beep.mp3'  // or you can pass an object:
@@ -32,6 +33,10 @@ Meteor.startup(function() {
         // onClose: function() {
         //     /* Code here will be executed once the alert closes. */
         // }
+    });
+
+    Avatar.setOptions({
+        fallbackType: 'initials'
     });
 });
 
