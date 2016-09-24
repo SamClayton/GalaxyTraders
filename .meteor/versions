@@ -20,7 +20,7 @@ binary-heap@1.0.9
 blaze@2.1.9
 blaze-html-templates@1.0.5
 blaze-tools@1.0.10
-boilerplate-generator@1.0.9
+boilerplate-generator@1.0.10
 browser-policy@1.0.9
 browser-policy-common@1.0.10
 browser-policy-content@1.0.11
@@ -90,7 +90,7 @@ mobile-experience@1.0.4
 mobile-status-bar@1.0.12
 modules@0.7.6
 modules-runtime@0.7.6
-momentjs:moment@2.15.0
+momentjs:moment@2.15.1
 mongo@1.1.12
 mongo-id@1.0.5
 msavin:jetsetter@2.0.0
