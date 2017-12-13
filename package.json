@@ -1,14 +1,24 @@
 {
   "name": "GalaxyTraders",
+  "description": "Space trading game modeled after Alien Assault Traders",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamClayton/GalaxyTraders"
+  },
+  "contributors": [{
+    "name": "Sam Clayton",
+    "email": "sam@goranku.com",
+    "site": "https://github.com/SamClayton"
+  }],
   "scripts": {
     "start": "meteor run"
   },
   "engines": {
-    "node": "6.9.2"
+    "node": "8.8.1"
   },
   "dependencies": {
-    "bcrypt": "^0.8.7",
-    "meteor-node-stubs": "~0.2.0"
+    "bcrypt": "^1.0.3",
+    "meteor-node-stubs": "^0.3.2"
   }
 }
