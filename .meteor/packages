@@ -11,6 +11,8 @@ mongo@1.3.1                  # The database Meteor supports right now
 blaze-html-templates@1.0.4      # Compile .html files into Meteor Blaze views
 reactive-var@1.0.11             # Reactive variable for tracker
 tracker@1.1.3                   # Meteor's client-side reactive programming library
+dynamic-import                  # Runtime support for Meteor 1.5 dynamic import(...) syntax
+
 # jquery@1.11.9                 # jQuery client-side library
 # random                        # PRNG
 
@@ -27,9 +29,10 @@ kadira:flow-router              # Routing
 kadira:blaze-layout             # Layout
 
 useraccounts:core               # Needed for AccountsTemplates.configure ?
-accounts-base@1.4.0                   # Base user accounts package
+accounts-base@1.4.0             # Base user accounts package
 accounts-password@1.5.0         # username/password login to account
-accounts-facebook@1.3.0        # Facebook user login
+accounts-facebook@1.3.0         # Facebook user login
+facebook-config-ui              # Blaze configuration templates for Facebook OAuth
 # accounts-github               # Github user login
 # accounts-google               # Google user login
 ian:accounts-ui-bootstrap-3     # UI for user accounts including Facebook and username/password logins
@@ -38,23 +41,22 @@ utilities:avatar                # Support for user's profile photo
 # useraccounts:flow-routing     # UserAccounts package providing routes configuration capability via kadira:flow-router
 # useraccounts:bootstrap        # Accounts Templates styled for Twitter Bootstrap
 
-browser-policy@1.1.0            # CSP package. Careful, because it's already caused some CSP headaches with web fonts
-underscorestring:underscore.string      # String manipulation extensions for Underscore.js javascript library (used for number string formatting)
-3stack:bignumber                # Dealing with large numbers. AAT deals with these often
+browser-policy@1.1.0                # CSP package. Careful, because it's already caused some CSP headaches with web fonts
+underscorestring:underscore.string  # String manipulation extensions for Underscore.js javascript library (used for number string formatting)
+3stack:bignumber@4.0.2              # Dealing with large numbers. AAT deals with these often
 
-aldeed:simple-schema            # Used in the LevelUpTut Intermediate Meteor, also by Collections2 and AutoForm used there
+# Note: aldeed:simple-schema has been replaced with an npm package that these depend on. Meteor pkg deprecated.
 aldeed:schema-index             # Control Mongo indexes through SimpleSchema
-aldeed:collection2              # Added because the Meteor Guide covers how to auto-enforce Simple Schema on mutators (CUD ops)
-aldeed:autoform@5.0.0           # Works with collection2 and schemas to autogenerate forms
+aldeed:collection2-core         # Added because the Meteor Guide covers how to auto-enforce Simple Schema on mutators (CUD ops)
+aldeed:autoform@6.2.0           # Works with collection2 and schemas to autogenerate forms
 momentjs:moment                 # Dependency of autoform, but also useful for general Date math
 
 juliancwirko:s-alert            # Simple and fancy notifications / alerts / errors for Meteor
 juliancwirko:s-alert-jelly      # Jelly visual effect for s-alert
 
-meteortoys:allthings            # Dev tools yay "Since Meteor Toys are a debugOnly package, Meteor's build process will not compile it into production code."
 # alanning:trace                  # Client console trace output for devs
 # okland:pidusage                 # System monitoring including cpu usage
-
+# meteortoys:allthings            # Cool, useful dev toys, but I removed for now due to package upgrade headache "Since Meteor Toys are a debugOnly package, Meteor's build process will not compile it into production code."
 
 # packages to consider
 # dburles:collection-helpers
@@ -74,5 +76,5 @@ meteortoys:allthings            # Dev tools yay "Since Meteor Toys are a debugOn
 
 # This one may be particularly good for replacing "scheduler"
 # vsivsi:job-collection          # A persistent and reactive job queue for Meteor, supporting distributed workers that can run anywhere
-facebook-config-ui
-dynamic-import
+
+
