@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor'
-import { BrowserPolicy } from 'meteor/browser-policy-common'
+// import BrowserPolicy from './browserpolicy.js-disabled'
 import { Games } from '../lib/collections/games.js'
 import { Rankings } from '../lib/collections/rankings.js'
 import { Sectors } from '../lib/collections/sectors.js'
@@ -36,24 +36,44 @@ function publishCoreGameData () {
 
   // Override the default Users publication/collection, with the FB ID included for Avatar functionality
   Meteor.publish('Users', function () {
-    return Meteor.users.find({
-      _id: this.userId
-    }, {
-      fields: {
-        username: true,
-        email: true,
-        profile: true,
-        roles: true,
-        'services.facebook.id': true,
-        'services.facebook.email': true,
-        'services.twitter.profile_image_url_https': true,
-        'services.google.picture': true,
-        'services.github.username': true,
-        'services.instagram.profile_picture': true,
-        'services.linkedin.pictureUrl': true
-        // user_profile_picture: true
-      }
-    })
+    // Administrators can access all users
+    if (Roles.userIsInRole(this.userId, ['Administrator'])) {
+      return Meteor.users.find({}, {
+        fields: {
+          username: true,
+          email: true,
+          profile: true,
+          roles: true,
+          'services.facebook.id': true,
+          'services.facebook.email': true,
+          'services.twitter.profile_image_url_https': true,
+          'services.google.picture': true,
+          'services.github.username': true,
+          'services.instagram.profile_picture': true,
+          'services.linkedin.pictureUrl': true
+          // 'user_profile_picture': true
+        }
+      })
+    } else {
+      return Meteor.users.find({
+        _id: this.userId
+      }, {
+        fields: {
+          username: true,
+          email: true,
+          profile: true,
+          roles: true,
+          'services.facebook.id': true,
+          'services.facebook.email': true,
+          'services.twitter.profile_image_url_https': true,
+          'services.google.picture': true,
+          'services.github.username': true,
+          'services.instagram.profile_picture': true,
+          'services.linkedin.pictureUrl': true
+          // 'user_profile_picture': true
+        }
+      })
+    }
   })
 
   // We also deny all client-side write to user objects
@@ -63,11 +83,12 @@ function publishCoreGameData () {
   })
 
   // TODO this needs helpers and ACLs to only publish sector data the user can see
-  Meteor.publish('Sectors', function() {
+  Meteor.publish('Sectors', function () {
     return Sectors.find()
   })
 }
 
+// Can we just use isAdmin, or otherwise move this to another file?
 function isAdminForPublication (userId) {
   if (Roles.userIsInRole(userId, ['Administrator'])) {
     // console.log("Subscribing user is admin")

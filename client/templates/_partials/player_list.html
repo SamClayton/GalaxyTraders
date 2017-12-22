@@ -1,0 +1,36 @@
+<template name="player_list">
+    <h1 class="text-center">Players</h1>
+    <div class="container span8 offset2" id="player_list">
+        <div class="table-responsive">
+            <p>Total users: {{players.length}}</p>
+            <p>Total online: {{players.length}}</p>
+            <table class="table inverse-table table-condensed table-hover">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Joined</th>
+                    <th>Last Online</th>
+                    <th>Roles</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each Players}}
+                    <tr>
+                        <th scope="row">{{profile.name}}</th>
+                        <td>{{profile.username}}</td>
+                        <td>{{formatDate joined}}</td>
+                        <td>{{formatDate lastSeen}}</td>
+                        <td>{{Roles}}</td>
+                        <td>{{email}}</td>{{! this is sometimes services.facebook.email and sometimes emaails[].address }}
+                        <td>{{! add action buttons for each game, or do some sort of modal or something for end/delete/edit }}</td>
+                    </tr>
+                {{else}}
+                    <tr><td class="text-center lead" colspan="8">No players found.</td></tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,29 @@
+<template name="admin_sector">
+    <div class="container span8 offset2" id="admin_sector"><!-- goddammit, this won't pad the top -->
+    <h1 class="text-center">Sectors</h1>
+    <div class="table-responsive">
+    <table class="table inverse-table table-condensed table-hover">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>FedSpace</th>
+            <th>Warps</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each sectors}}
+            <tr>
+                <th scope="row">{{_id}}</th>
+                <td>{{name}}</td>
+                <td>{{fedSpace}}</td>
+                <td>{{warps}}</td>
+            </tr>
+        {{else}}
+            <tr><td class="text-center lead" colspan="8">No warps found.</td></tr>
+        {{/each}}
+        </tbody>
+    </table>
+    </div>
+    </div>
+</template>
