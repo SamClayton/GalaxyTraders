@@ -1,9 +1,10 @@
 import { Template } from 'meteor/templating'
 
 Meteor.startup(function () {
+  Meteor.subscribe('Users')
   Meteor.subscribe('Games')
   Meteor.subscribe('Rankings')
-  Meteor.subscribe('Users')
+  Meteor.subscribe('Sectors')
 
   sAlert.config({
     effect: 'jelly',

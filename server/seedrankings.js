@@ -1,3 +1,5 @@
+import { Rankings } from '../lib/collections/rankings.js'
+
 // Seed player rankings collection for initial creation
 // TODO break out to separate JSON and code?
 

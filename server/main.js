@@ -1,5 +1,9 @@
 import { Meteor } from 'meteor/meteor'
 import { BrowserPolicy } from 'meteor/browser-policy-common'
+import { Games } from '../lib/collections/games.js'
+import { Rankings } from '../lib/collections/rankings.js'
+import { Sectors } from '../lib/collections/sectors.js'
+// import { Users } from '../lib/collections/users.js'
 
 Meteor.startup(() => {
   configureContentSecurityPolicy()
@@ -13,6 +17,8 @@ Meteor.startup(() => {
 function publishCoreGameData () {
   Meteor.publish('Games', function () {
     // console.log("user: " + this.userId)
+    // console.log(isAdminForPublication(this.userId))
+    // console.log(Games)
     if (isAdminForPublication(this.userId)) {
       return Games.find({}, {sort: {date_created: -1}})
     } else {
@@ -24,6 +30,7 @@ function publishCoreGameData () {
   })
 
   Meteor.publish('Rankings', function () {
+    // console.log(Rankings.find().count())
     return Rankings.find()
   })
 
@@ -53,6 +60,11 @@ function publishCoreGameData () {
   // https://guide.meteor.com/accounts.html#dont-use-profile
   Meteor.users.deny({
     update () { return true }
+  })
+
+  // TODO this needs helpers and ACLs to only publish sector data the user can see
+  Meteor.publish('Sectors', function() {
+    return Sectors.find()
   })
 }
 

@@ -1,3 +1,5 @@
+import { Rankings } from '../../../lib/collections/rankings.js'
+
 Template.rankings.helpers({
   rankings: function () {
     return Rankings.find()

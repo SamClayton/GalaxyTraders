@@ -78,3 +78,4 @@ juliancwirko:s-alert-jelly      # Jelly visual effect for s-alert
 # vsivsi:job-collection          # A persistent and reactive job queue for Meteor, supporting distributed workers that can run anywhere
 
 
+meteortoys:allthings
