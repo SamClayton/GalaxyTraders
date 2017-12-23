@@ -49,7 +49,11 @@ underscorestring:underscore.string  # String manipulation extensions for Undersc
 aldeed:schema-index             # Control Mongo indexes through SimpleSchema
 aldeed:collection2-core         # Added because the Meteor Guide covers how to auto-enforce Simple Schema on mutators (CUD ops)
 aldeed:autoform@6.2.0           # Works with collection2 and schemas to autogenerate forms
-momentjs:moment                 # Dependency of autoform, but also useful for general Date math
+matadur:autoform-bs-datetimepicker
+tsega:bootstrap3-datetimepicker@=3.1.3_3
+# momentjs:moment                 # Dependency of autoform, but also useful for general Date math
+momentjs:moment
+risul:moment-timezone
 
 juliancwirko:s-alert            # Simple and fancy notifications / alerts / errors for Meteor
 juliancwirko:s-alert-jelly      # Jelly visual effect for s-alert

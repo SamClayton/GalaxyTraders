@@ -4,6 +4,9 @@
         <fieldset>
             <legend>Create New Game</legend>
             {{> afQuickField name='name' autocomplete="off"}}
+            <div>{{> afQuickField name='startDate'}}</div>
+            {{> afQuickField name='endDate'}}
+            {{> afQuickField name='settings'}}
         </fieldset>
         {{! TODO add handlers to redirect to games list or confirmation on success}}
         <button type="submit" class="btn btn-primary">Create</button>

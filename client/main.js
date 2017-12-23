@@ -1,14 +1,17 @@
 import { Template } from 'meteor/templating'
+import { Games } from '../lib/collections/games.js'
 
 Meteor.startup(function () {
   // TODO do we need subscription handles?
   const Users = Meteor.subscribe('Users')
-  Meteor.subscribe('Games')
+  const gamesHandle = Meteor.subscribe('Games')
   const Rankings = Meteor.subscribe('Rankings')
   Meteor.subscribe('Sectors')
 
   // console.log(Users.ready())
 
+  // Configure sAlert
+  // TODO move this into its own file
   sAlert.config({
     effect: 'jelly',
     position: 'top-right',
