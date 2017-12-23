@@ -5,6 +5,7 @@ accounts-oauth@1.1.15
 accounts-password@1.5.0
 alanning:roles@1.2.16
 aldeed:autoform@6.2.0
+aldeed:autoform-bs-datetimepicker@1.0.7
 aldeed:collection2-core@2.1.0
 aldeed:schema-index@2.1.1
 allow-deny@1.1.0
@@ -64,7 +65,6 @@ launch-screen@1.1.1
 livedata@1.0.18
 localstorage@1.2.0
 logging@1.1.19
-matadur:autoform-bs-datetimepicker@1.0.8
 meteor@1.8.2
 meteor-base@1.2.0
 meteorhacks:inject-initial@1.0.4

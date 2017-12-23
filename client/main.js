@@ -8,8 +8,6 @@ Meteor.startup(function () {
   const Rankings = Meteor.subscribe('Rankings')
   Meteor.subscribe('Sectors')
 
-  // console.log(Users.ready())
-
   // Configure sAlert
   // TODO move this into its own file
   sAlert.config({
